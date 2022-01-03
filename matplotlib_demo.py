@@ -1,26 +1,27 @@
 import matplotlib
 import matplotlib.pyplot as plt
 
-from util import load_data
+from util import setup
 from config import config
 
+monster_data, challenge_rating, hit_points, armor_class = setup()
+
+# set up backend
 matplotlib.use("WxAgg")
 
-monster_data = load_data(["hit_points", "challenge_rating", "armor_class"])
-
-challenge_rating = monster_data["challenge_rating"]
-hit_points = monster_data["hit_points"]
-armor_class = monster_data["armor_class"]
-
+# create chart container and graph
 fig, ax = plt.subplots()
 
+# draw all dots on the scatter plot
 for stat in config.get("stats"):
     scatter = ax.scatter(challenge_rating, monster_data[stat], hit_points, label=stat)
 
+# add labels
 plt.title(config.get("chart_title"))
 plt.xlabel(config.get("x_axis"))
 plt.ylabel(config.get("y_axis"))
 
+# add legends
 legend = plt.legend()  # auto-detected legend, nice!
 # digging into private vars to set legend dot sizes - not so nice
 for dot in legend.legendHandles:
@@ -28,4 +29,5 @@ for dot in legend.legendHandles:
 
 matplotlib.pyplot.text(0, max(monster_data["strength"]), config.get("blurb"))
 
+# display the chart
 plt.show()

@@ -11,6 +11,6 @@ config = {
     "chart_title": "Monster Stats in DnD",
     "x_axis": "Challenge Rating",
     "y_axis": "Stat Value",
-    "colors": ["red", "orange", "yellow", "green", "blue", "purple"],
+    "metadata": ["hit_points", "challenge_rating", "armor_class"],
     "blurb": "* dot size indicates relative hitpoints",
 }

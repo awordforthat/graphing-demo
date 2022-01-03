@@ -12,3 +12,16 @@ def load_data(columns=[]):
     """
     columns.extend(config.get("stats"))
     return pandas.read_csv(config.get("data"), usecols=columns)
+
+
+def extract_metadata(data):
+    """
+    Separate out the columns that aren't raw stats and return them
+    """
+    return data["challenge_rating"], data["hit_points"], data["armor_class"]
+
+
+def setup():
+    monster_data = load_data(config.get("data"))
+    cr, hp, md = extract_metadata(monster_data)
+    return monster_data, cr, hp, md
