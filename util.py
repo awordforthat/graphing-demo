@@ -22,6 +22,6 @@ def extract_metadata(data):
 
 
 def setup():
-    monster_data = load_data(config.get("data"))
+    monster_data = load_data(config.get("metadata"))
     cr, hp, md = extract_metadata(monster_data)
     return monster_data, cr, hp, md
