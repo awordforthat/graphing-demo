@@ -1,8 +1,8 @@
 from bokeh.plotting import figure, show
 from bokeh.models import Label
 
-from util import setup
-from config import config
+from meta.util import setup
+from meta.config import config
 
 monster_data, challenge_rating, hit_points, armor_class = setup()
 

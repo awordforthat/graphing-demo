@@ -1,8 +1,8 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from util import setup
-from config import config
+from meta.util import setup
+from meta.config import config
 
 monster_data, challenge_rating, hit_points, armor_class = setup()
 

@@ -1,5 +1,5 @@
 import pandas
-from config import config
+from .config import config
 
 
 def load_data(columns=[]):

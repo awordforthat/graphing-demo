@@ -1,5 +1,5 @@
 config = {
-    "data": "monsters.csv",
+    "data": "./data/monsters.csv",
     "stats": [
         "strength",
         "dexterity",
