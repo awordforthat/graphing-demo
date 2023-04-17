@@ -9,6 +9,9 @@ monster_data, challenge_rating, hit_points, armor_class = setup()
 # set up backend
 matplotlib.use("WxAgg")
 
+# if you can't get WxAgg to work, use the following line instead of the one above:
+# matplotlib.use("PyQt5")
+
 # create chart container and graph
 fig, ax = plt.subplots()
 

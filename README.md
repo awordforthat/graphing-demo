@@ -14,6 +14,10 @@ This was put together for the Boston Python Data Science Study group in Jan. 202
      - `requests`
 4. Run each demo from the command line, e.g. `python matplotlib_demo.py`
 
+## Troubleshooting Install
+
+- On some (all?) OSX computers, `wxPython` fails to install with a message like "C compiler cannot create executables". A workaround for this is to use a different graphics backend for `matplotlib`. To do this, manually install PyQt5 (`pip install PyQt5`), and in `matplotlib_demo.py`, see the comment about switching `WxAgg` for `PyQt5`.
+
 ## Data
 
 The data was sourced from [Kaggle](https://www.kaggle.com/shadowtime2000/dungeons-dragons?select=monsters.csv) and mostly processed with pandas.
