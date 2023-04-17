@@ -7,8 +7,11 @@ This was put together for the Boston Python Data Science Study group in Jan. 202
 ## Running the Demos
 
 1. First, create a virtual environment using `python -m venv venv`.
-2. Activate the virtual environment with `source venv/bin/activate` (on Unix) or `source venv/scripts/activate` (on Windows)
+2. Activate the virtual environment with `source venv/bin/activate` (on Unix) or `./venv/scripts/activate.bat` (on Windows)
 3. Install the requirements with `pip install -r requirements.txt`.
+   - You may have to install these dependencies manually using `pip install <package>`:
+     - `attrdict3`
+     - `requests`
 4. Run each demo from the command line, e.g. `python matplotlib_demo.py`
 
 ## Data
